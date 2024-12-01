@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card text-center">
+            <div class="col-md-12">
+                <button mat-raised-button style="margin: 60px;" color="primary" (click)="openAddMenuItemForm()">Add Food</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Food Name</th>
+                        <th>Description</th>
+                        <th>price</th>
+                        <th>Actions</th>
+                     
+                    </tr>
+                </thead>
+                
+                <tbody>
+                  
+                    <tr *ngFor="let item of listMenuItems">
+                        <td> {{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.price}}</td>
+                        <td>
+                            <div>
+                                <button type="button" mat-raised-button color="primary" (click)="openUpdateItemDialog(item.id,item)">Update</button> |
+                                <button type="button" mat-raised-button color="accent" (click)="deleteMenuItemById(item.id)">Delete</button> 
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

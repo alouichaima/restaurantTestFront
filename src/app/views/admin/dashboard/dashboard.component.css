@@ -1,0 +1,83 @@
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  width: 250px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  flex-grow: 2;
+  padding: 20px;
+}
+
+.main-top {
+  text-align: center;
+}
+
+.square-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.square {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 40px; /* Adjust padding to make the content area bigger */
+  margin-bottom: 40px; /* Increase margin to create more space between squares */
+  width: calc(50% - 80px); /* Adjust width to account for increased padding */
+  height: 150px; /* Increase height to make the square taller */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fa-icon {
+  font-size: 38px; /* Increase icon size */
+  margin-bottom: 10px; /* Add margin to separate the icon from the text */
+}
+
+.square h2 {
+  margin-top: 10px;
+}
+.square p {
+  font-size: 36px;
+}
+.pending-icon {
+  font-size: 20px; /* Taille de l'icône */
+  color: #060303; /* Couleur de l'icône (gris clair dans cet exemple) */
+}
+.disapprove-icon {
+  font-size: 20px; /* Taille de l'icône */
+  color: #ff6347; /* Couleur de l'icône pour indiquer la désapprobation (rouge vif dans cet exemple) */
+}
+
+

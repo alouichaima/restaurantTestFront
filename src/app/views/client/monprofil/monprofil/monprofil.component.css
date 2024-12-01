@@ -1,0 +1,46 @@
+.container {
+  margin-top: 20px;
+}
+
+.panel-body {
+  padding: 20px;
+}
+
+.inf-content {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.img-profile {
+  width: 190px;
+  margin-top: 0.5cm;
+  border-radius: 50%;
+}
+
+.form-group {
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  margin-top: 10px;
+}
+
+.ratings {
+  margin-top: 20px;
+}
+
+.table-user-information {
+  width: 100%;
+}
+
+.table-user-information td {
+  border: none;
+}
+
+.table-user-information strong {
+  margin-right: 10px;
+}

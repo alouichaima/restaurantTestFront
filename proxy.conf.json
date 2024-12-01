@@ -1,0 +1,18 @@
+{
+  "/api": {
+    "target": "http://localhost:7600",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "agent": {
+      "http": {
+        "proxy": "http://localhost:8096"
+      },
+      "https": {
+        "proxy": "http://localhost:8096",
+        "ca": "C:/Users/Chaima/Desktop/test/zap_root_ca.cer"
+      }
+    }
+
+  }
+}

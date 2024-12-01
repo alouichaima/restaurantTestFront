@@ -1,0 +1,26 @@
+<!-- add-item.component.html -->
+
+<div>
+  <h2>Add Item</h2>
+  <form [formGroup]="menuItemForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" formControlName="name" id="name" required>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" formControlName="description" id="description" required>
+    </div>
+    <div>
+      <label for="price">Price:</label>
+      <input type="number" formControlName="price" id="price" required>
+    </div>
+    <div>
+      <label for="categoryId">Category:</label>
+      <select formControlName="categoryId" id="categoryId">
+        <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="menuItemForm.invalid">Add Item</button>
+  </form>
+</div>

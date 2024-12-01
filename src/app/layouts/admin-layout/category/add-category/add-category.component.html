@@ -1,0 +1,29 @@
+<h2>Add Category</h2>
+
+<form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+  <!-- Message d'erreur général -->
+  <div *ngIf="formSubmitted && categoryForm.invalid" class="error general-error">
+    Please fill in all required fields.
+  </div>
+
+  <div>
+    <label for="name">Category Name:</label>
+    <input type="text" id="name" formControlName="name" required>
+    <div *ngIf="categoryForm.get('name')?.touched && categoryForm.get('name')?.hasError('required')" class="error">
+      Category Name is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" formControlName="description" required></textarea>
+    <div *ngIf="categoryForm.get('description')?.touched && categoryForm.get('description')?.hasError('required')" class="error">
+      Description is required.
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" mat-raised-button color="primary" >Add</button>
+
+  </div>
+</form>
